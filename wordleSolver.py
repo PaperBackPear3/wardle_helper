@@ -49,7 +49,7 @@ def create_characters_utility_dict(characters_weight_list,word:str):
 def convert_missing_to_wrong_position(characters_utility:dict):
     for character in characters_utility:
         for index,weight in enumerate(characters_utility[character]):
-            if weight == 0 and len(characters_utility[character])>1 and index != 0:
+            if weight == 0 and len(characters_utility[character])>1:
                 characters_utility[character][index] = 3
     return characters_utility
 
